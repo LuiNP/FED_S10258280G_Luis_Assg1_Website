@@ -1,0 +1,20 @@
+.test {
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: blue;
+    color: white;
+    padding-left: 5%;
+}
+
+.image{
+    text-align: center;
+    width: 100vw;
+}
+
+.caption{
+    justify-content: left;
+    /*font-size: 8em;*/
+}
