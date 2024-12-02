@@ -1,20 +1,190 @@
-.test {
-    display: flex;
-    flex-direction: column;
+.title{
+    padding-top: 75px;
 }
 
 header{
-    background-color: blue;
+    background-color: darkblue;
     color: white;
-    padding-left: 5%;
+    display: flex;
+    position: sticky;
+    top: 0;
+    flex-direction: column;
+    width: 100vw;
 }
 
-.image{
+.image, .title{
     text-align: center;
     width: 100vw;
 }
 
-.caption{
+.image{
+    padding-top: 50px;
+    padding-bottom: 25px;
+    
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer{
+    padding-top: 20px;
+}
+
+.home-top{
+    color:white;
+}
+
+.home-bottom, .home-top{
+    padding-top: 20px;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+}   
+
+@media screen and (max-width:900px) {
+header{
     justify-content: left;
-    /*font-size: 8em;*/
+}
+
+.home-bottom, .link{
+    padding-top: 50px;
+}
+
+    a{
+        font-size: 25px;
+    }
+    
+    h1{
+        font-size: 40px;
+    }
+    
+    h2{
+    font-size: 30px;
+    }
+    
+    h3{
+        font-size: 25px;
+    }
+    
+    p, li{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+header{
+    flex-direction: row;
+    align-items: center;
+}
+
+.details{
+flex-direction: row;
+align-items: center;
+}
+
+.infotext{
+    padding-left: 20em;
+}
+
+.home-top{
+    padding-left: 30vw;
+    color:white;
+}
+
+.home-bottom{
+    padding-left: 50vw;
+    padding-top: 20px;
+}
+
+.links{
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.sitename{
+    padding-left: 5vw;
+}
+
+a{
+    font-size: 25px;
+}
+
+h1{
+    font-size: 50px;
+}
+
+h2{
+font-size: 40px;
+}
+
+h3{
+    font-size: 35px;
+}
+
+p, li{
+    font-size: 20px;
+}
+
+}
+
+
+
+
+    .container {
+        display: flex;
+        width: 100%;
+        background-color: #fff;
+        flex-wrap: wrap;
+        /*wrap flex items to a new row if not enough space */
+    }
+
+    /* flex item of 20% per item */
+    .flex-item {
+        padding: 2%;
+        flex-grow: 1;
+        flex-basis: 15%;
+        /* 15% for borders*/
+
+        display: flex;
+        flex-direction: column;
+        /* so child elements can use flexbox stuff too! */
+        /* switching on borders will force the 5th flex item to move down*/
+        border: 1px solid #D3D3D3;
+
+
+        /* let's set random images if we want to create cover images */
+        /*
+  background-image: url("https://picsum.photos/400/400");
+  background-size: cover;
+  */
+    }
+
+    .flex-img {
+        max-width: 100%;
+    }
+
+    .flex-info {
+        margin-top: auto;
+    }
+
+    @media (max-width: 920px) {
+        .flex-item {
+            flex: 1 21%;
+        }
+  /* This is a flex shorthand */
+  /* we set 
+    flex-grow: 1; 
+    flex-basis: 21%;
+    Flex shorthand: https://developer.mozilla.org/en-US/docs/Web/CSS/flex
+    Understand flex grow: https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow
+  */
+    }
+
+img{
+  width: 400px;
 }
